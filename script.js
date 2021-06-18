@@ -1,19 +1,19 @@
-let html = document.getElementById("tiempo");
+let html = document.getElementById("timehtml");
 
 setInterval(function(){
-	tiempo = new Date();
+	time = new Date();
 
-	horas = tiempo.getHours();
-	minutos = tiempo.getMinutes();
-	segundos = tiempo.getSeconds();
+	hours = time.getHours();
+	minutes = time.getMinutes();
+	seconds = time.getSeconds();
 
 	//evitar los 0 o numeros individuales
-	if(horas<10)
-		horas = "0"+horas;
-	if(minutos<10)
-		minutos = "0"+minutos;
-	if(segundos<10)
-		segundos = "0"+segundos;
+	if(hours<10)
+		hours = "0"+hours;
+	if(minutes<10)
+		minutes = "0"+minutes;
+	if(seconds<10)
+		seconds = "0"+seconds;
 
-	html.innerHTML = horas+" : "+minutos+" : "+segundos;
+	html.innerHTML = hours+" : "+minutes+" : "+seconds;
 },1000);
